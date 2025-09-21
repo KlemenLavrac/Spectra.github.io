@@ -1,1 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spectra — AI-Assisted Manufacturing Analytics</title>
+  <meta name="description" content="Spectra delivers advanced, LLM-powered analytics for manufacturing — available as a secure cloud service or on‑prem for regulated environments." />
+  <meta name="theme-color" content="#0f172a" />
+  <meta property="og:title" content="Spectra — AI-Assisted Manufacturing Analytics" />
+  <meta property="og:description" content="Cloud or on‑prem. Turn process data, quality attributes, and stability data into decisions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://dummyimage.com/1200x630/0f172a/ffffff&text=Spectra" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1220; /* slate-950 */
+      --panel: #0f172a; /* slate-900 */
+      --muted: #94a3b8; /* slate-400 */
+      --text: #e2e8f0; /* slate-200 */
+      --brand: #38bdf8; /* sky-400 */
+      --brand-2: #22d3ee; /* cyan-400 */
+      --accent: #a78bfa; /* violet-400 */
+      --ring: rgba(56,189,248,.45);
+      --ok: #34d399; /* emerald-400 */
+      --warn: #fbbf24; /* amber-400 */
+      --danger: #fb7185; /* rose-400 */
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(2,6,23,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:"Inter",system-ui,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{opacity:.9}
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(2,6,23,.9),rgba(2,6,23,.6));backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid rgba(148,163,184,.15)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .logo{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.3px}
+    .logo .mark{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--accent));box-shadow:0 6px 18px rgba(56,189,248,.35)}
+    .nav a{color:var(--text);opacity:.9;margin-left:18px}
+    .nav a.cta{background:linear-gradient(135deg,var(--brand),var(--brand-2));padding:10px 14px;border-radius:12px;color:#001018;font-weight:600;box-shadow:var(--shadow)}
+    .hero{isolation:isolate;position:relative;padding:80px 0;overflow:hidden}
+    .hero:before{content:"";position:absolute;inset:-20% -10% auto -10%;height:60%;background:radial-gradient(600px 300px at 20% 30%,rgba(56,189,248,.25),transparent 60%), radial-gradient(600px 300px at 80% 30%,rgba(167,139,250,.18),transparent 60%)}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+    h1{font-size:44px;line-height:1.1;margin:0 0 10px}
+    .lead{font-size:18px;color:var(--muted);margin-bottom:24px}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 28px}
+    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(148,163,184,.2);color:#cbd5e1;border-radius:999px;padding:6px 10px;font-size:13px}
+    .kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:26px}
+    .kpi{background:linear-gradient(180deg,rgba(15,23,42,.8),rgba(15,23,42,.5));border:1px solid rgba(148,163,184,.16);border-radius:var(--radius);padding:16px}
+    .kpi h3{margin:0;font-size:26px}
+    .kpi p{margin:6px 0 0;color:var(--muted);font-size:13px}
+    .panel{background:linear-gradient(180deg,rgba(15,23,42,.85),rgba(15,23,42,.6));border:1px solid rgba(148,163,184,.18);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .device{aspect-ratio:16/10;border-radius:16px;border:1px solid rgba(148,163,184,.18);background:linear-gradient(180deg,#0b1020,#0f1730);display:grid;place-items:center;overflow:hidden}
+    .device .screen{width:94%;height:82%;border-radius:12px;background:linear-gradient(180deg,#0e1324,#101b35);border:1px solid rgba(148,163,184,.18);position:relative}
+    .screen .bar{height:42px;border-bottom:1px solid rgba(148,163,184,.15);display:flex;align-items:center;padding:0 10px;gap:8px}
+    .dot{width:10px;height:10px;border-radius:999px;background:#e11d48}
+    .dot:nth-child(2){background:#f59e0b}
+    .dot:nth-child(3){background:#22c55e}
+    .screen pre{margin:0;padding:18px;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;color:#cbd5e1;white-space:pre-wrap}
+    section{padding:70px 0}
+    h2{font-size:32px;margin:0 0 14px}
+    .muted{color:var(--muted)}
+    .grid{display:grid;gap:18px}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .card{padding:18px;border:1px solid rgba(148,163,184,.18);border-radius:16px;background:linear-gradient(180deg,rgba(15,23,42,.8),rgba(15,23,42,.55))}
+    .card h3{margin:4px 0 6px;font-size:20px}
+    .list{margin:10px 0 0;padding:0 0 0 18px}
+    .list li{margin:6px 0}
+    .pill{display:inline-block;background:linear-gradient(135deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#001018;font-weight:700;border-radius:12px;padding:12px 16px;border:0;cursor:pointer}
+    .btn.secondary{background:transparent;color:var(--text);border:1px solid rgba(148,163,184,.24)}
+    .features{display:grid;gap:14px;grid-template-columns:repeat(3,minmax(0,1fr))}
+    .feature{padding:16px;border:1px solid rgba(148,163,184,.16);border-radius:16px}
+    .feature h4{margin:8px 0 6px}
+    .small{font-size:13px;color:var(--muted)}
+    .team{display:grid;gap:16px;grid-template-columns:repeat(3,minmax(0,1fr))}
+    .member{padding:16px;border:1px solid rgba(148,163,184,.16);border-radius:16px}
+    .member h3{margin:8px 0 4px}
+    .foot{padding:28px 0;border-top:1px solid rgba(148,163,184,.16);color:#94a3b8;font-size:14px}
+    .inline-list{display:flex;gap:16px;flex-wrap:wrap;padding:0;margin:8px 0 0;list-style:none}
+    .notice{font-size:13px;color:#94a3b8}
+    .schema{display:none}
 
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
+      .kpis{grid-template-columns:1fr 1fr}
+      .features,.team,.grid-3{grid-template-columns:1fr}
+    }
+  </style>
+  <script>
+    // Smooth scroll for internal links
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        if(id && id.length > 1){
+          e.preventDefault();
+          document.querySelector(id)?.scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      }));
+    });
+  </script>
+  <script type="application/ld+json" class="schema">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Spectra Manufacturing",
+    "url": "https://example.com",
+    "logo": "https://dummyimage.com/600x600/0f172a/ffffff&text=Spectra",
+    "sameAs": [],
+    "description": "Spectra delivers advanced, LLM-powered analytics for manufacturing.",
+    "foundingDate": "2025-12-01",
+    "founders": [
+      {"@type":"Person","name":"Klemen"},
+      {"@type":"Person","name":"Amadej"},
+      {"@type":"Person","name":"Silvija"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo" aria-label="Spectra logo">
+        <div class="mark" aria-hidden="true"></div>
+        <span>Spectra</span>
+      </div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#data">Data model</a>
+        <a href="#modes">Deployment</a>
+        <a href="#team">Team</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="badge"><span class="dot" aria-hidden="true"></span> MVP in development — launch target: <strong>Q4 2025</strong></p>
+          <h1>AI‑Assisted Analytics for <span class="pill">High‑Tech Manufacturing</span></h1>
+          <p class="lead">Spectra turns <em>process parameters</em>, <em>quality attributes</em>, and <em>stability data</em> into precise decisions. Deploy in the cloud or fully on‑prem for regulated environments.</p>
+          <div class="cta-row">
+            <a class="btn" href="#contact">Request early access</a>
+            <a class="btn secondary" href="#features">Explore features</a>
+          </div>
+          <div class="kpis">
+            <div class="kpi"><h3>3×</h3><p>Faster root‑cause analysis (pilot)</p></div>
+            <div class="kpi"><h3>LLM</h3><p>Domain‑tuned insights</p></div>
+            <div class="kpi"><h3>On‑Prem</h3><p>Local processing option</p></div>
+          </div>
+        </div>
+        <div class="panel device" aria-label="Product preview">
+          <div class="screen">
+            <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <pre>
+// Example: Spectra query
+batch.where( process.param("Temp").spikes() )
+     .then( compare.qa("Yield") )
+     .explain()
+→ "A 4.2% yield drop correlates with
+  3 temperature spikes above 85°C on line A
+  during week 32. Suggested fix: tighten PID
+  bounds and retrain control model."
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <h2>Key features</h2>
+        <p class="muted">Designed with manufacturing teams in mind — from process engineering to QA and operations.</p>
+        <div class="features">
+          <div class="feature">
+            <h4>Unified data model</h4>
+            <p class="small">Process parameters (time‑series), batch‑level quality attributes, and long‑horizon stability data in one place.</p>
+          </div>
+          <div class="feature">
+            <h4>LLM‑assisted analysis</h4>
+            <p class="small">Ask natural‑language questions; Spectra composes the right transformations and statistics.</p>
+          </div>
+          <div class="feature">
+            <h4>Root‑cause & deviation</h4>
+            <p class="small">Rapid investigation workflows for non‑conformances and excursions.</p>
+          </div>
+          <div class="feature">
+            <h4>Validation‑friendly</h4>
+            <p class="small">Deterministic pipelines with audit trails to support regulated environments.</p>
+          </div>
+          <div class="feature">
+            <h4>Secure by design</h4>
+            <p class="small">Role‑based access, encryption in transit/at rest, and on‑prem option for sensitive data.</p>
+          </div>
+          <div class="feature">
+            <h4>Fast deployment</h4>
+            <p class="small">From prototype to production using your existing Git workflows and CI/CD.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="data">
+      <div class="container">
+        <h2>Data we support</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Process parameters</h3>
+            <p>Continuous, time‑based recordings per batch/line. Ideal for trend analysis, SPC and control optimization.</p>
+            <ul class="list">
+              <li>High‑frequency time series</li>
+              <li>Per‑batch & per‑line context</li>
+              <li>Outlier & drift detection</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Quality attributes</h3>
+            <p>Single measurement per batch for release and in‑process quality controls.</p>
+            <ul class="list">
+              <li>Spec windows & alerts</li>
+              <li>Batch comparisons</li>
+              <li>Correlation to process inputs</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Stability data</h3>
+            <p>Periodic measurements (e.g., annually) across product shelf life to ensure robustness.</p>
+            <ul class="list">
+              <li>Long‑horizon trends</li>
+              <li>Guideline‑aligned intervals</li>
+              <li>Forecasting & shelf‑life checks</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="modes">
+      <div class="container">
+        <h2>Deployment options</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Cloud</h3>
+            <p>Fully managed, secure cloud service with automated updates and scaling.</p>
+            <ul class="list">
+              <li>Rapid onboarding</li>
+              <li>Automatic SSL & backups</li>
+              <li>Global performance via CDN</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>On‑Prem</h3>
+            <p>For clients needing local security and data sovereignty.</p>
+            <ul class="list">
+              <li>Air‑gapped option</li>
+              <li>Local identity & audit</li>
+              <li>Integrates with existing DWH (e.g., Snowflake)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Hybrid</h3>
+            <p>Mix cloud scale with local control — keep sensitive data on‑site while using cloud analytics.</p>
+            <ul class="list">
+              <li>Selective sync</li>
+              <li>Policy‑based routing</li>
+              <li>Best of both worlds</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team">
+      <div class="container">
+        <h2>Team</h2>
+        <div class="team">
+          <div class="member">
+            <h3>Klemen</h3>
+            <p class="small">Co‑founder, Business & Marketing</p>
+            <p>Leading company ops and go‑to‑market for Spectra Manufacturing.</p>
+          </div>
+          <div class="member">
+            <h3>Amadej</h3>
+            <p class="small">Lead Developer</p>
+            <p>Architecting the Spectra platform and data pipelines.</p>
+          </div>
+          <div class="member">
+            <h3>Silvija</h3>
+            <p class="small">Statistics & Methodology</p>
+            <p>Designing robust analytics and validation‑friendly methods.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Get in touch</h3>
+            <p>Interested in pilots or partnership? Send us a note.</p>
+            <p><a href="mailto:hello@spectra.example">hello@spectra.example</a></p>
+          </div>
+          <div class="card">
+            <h3>Early access</h3>
+            <p>We’re onboarding a limited number of manufacturing teams.</p>
+            <a class="btn secondary" href="mailto:hello@spectra.example?subject=Spectra%20Early%20Access">Request access</a>
+          </div>
+          <div class="card">
+            <h3>Docs & security</h3>
+            <p>Security whitepaper and validation package available upon request.</p>
+            <p class="notice">NDA available.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="container">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+        <p>© <span id="year"></span> Spectra Manufacturing — All rights reserved.</p>
+        <ul class="inline-list">
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Security</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+</body>
+</html>
