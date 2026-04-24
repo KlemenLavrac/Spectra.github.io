@@ -1,0 +1,22 @@
+---
+layout: default
+title: Documentation
+description: Technical documentation, compliance guides, and API reference for SPECTRA.
+---
+<div class="page-layout">
+    <div class="page-container">
+        <div class="page-header">
+            <h1>Documentation</h1>
+            <p class="meta">Everything you need to deploy, configure, and use SPECTRA.</p>
+        </div>
+        <div class="listing-grid">
+            {% for doc in site.docs %}
+            <a href="{{ doc.url | relative_url }}" class="listing-card">
+                <h3>{{ doc.title }}</h3>
+                <p>{{ doc.description }}</p>
+                {% if doc.category %}<span class="tag">{{ doc.category }}</span>{% endif %}
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>

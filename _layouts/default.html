@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include head.html %}
+</head>
+<body{% if page.layout == 'landing' %} class="landing-page"{% endif %}>
+    {% include nav.html %}
+    {% include demo-modal.html %}
+    {{ content }}
+    {% unless page.layout == 'landing' %}
+    {% include footer.html %}
+    {% endunless %}
+    <script src="{{ '/assets/js/nav.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/demo-modal.js' | relative_url }}"></script>
+</body>
+</html>

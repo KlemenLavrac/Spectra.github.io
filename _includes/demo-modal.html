@@ -1,0 +1,135 @@
+<div id="demo-modal" class="demo-modal" aria-hidden="true" role="dialog" aria-labelledby="demo-modal-title">
+  <div class="demo-modal__overlay" id="demo-modal-overlay"></div>
+  <div class="demo-modal__panel">
+
+    <button class="demo-modal__close" id="demo-modal-close" aria-label="Close modal">
+      <i class="fas fa-times"></i>
+    </button>
+
+    <!-- Default state: the form -->
+    <div id="demo-form-wrap">
+      <div class="demo-modal__header">
+        <span class="hero-badge" style="margin-bottom: 0.75rem;">Request a Demo</span>
+        <h2 id="demo-modal-title">See SPECTRA in action</h2>
+        <p>Fill in a few details and we'll get back to you within one business day.</p>
+      </div>
+
+      <form id="demo-form" novalidate>
+
+        <div class="dform-row dform-row--2">
+          <div class="dform-field">
+            <label for="df-name">Full name <span>*</span></label>
+            <input type="text" id="df-name" name="name" placeholder="Jane Smith" required>
+          </div>
+          <div class="dform-field">
+            <label for="df-email">Work email <span>*</span></label>
+            <input type="email" id="df-email" name="email" placeholder="jane@company.com" required>
+          </div>
+        </div>
+
+        <div class="dform-row dform-row--2">
+          <div class="dform-field">
+            <label for="df-company">Company <span>*</span></label>
+            <input type="text" id="df-company" name="company" placeholder="Acme Pharma" required>
+          </div>
+          <div class="dform-field">
+            <label for="df-role">Your role / title <span>*</span></label>
+            <input type="text" id="df-role" name="role" placeholder="Process Engineer">
+          </div>
+        </div>
+
+        <div class="dform-row dform-row--2">
+          <div class="dform-field">
+            <label for="df-industry">Industry <span>*</span></label>
+            <select id="df-industry" name="industry" required>
+              <option value="" disabled selected>Select industry</option>
+              <option>Pharmaceuticals</option>
+              <option>Biotechnology</option>
+              <option>Food &amp; Beverage</option>
+              <option>Cosmetics &amp; Personal Care</option>
+              <option>Chemicals</option>
+              <option>Medical Devices</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="dform-field">
+            <label for="df-size">Company size</label>
+            <select id="df-size" name="company_size">
+              <option value="" disabled selected>Select size</option>
+              <option>1–20 employees</option>
+              <option>21–100 employees</option>
+              <option>101–500 employees</option>
+              <option>500+ employees</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="dform-row dform-row--2">
+          <div class="dform-field">
+            <label for="df-batches">Batches per month</label>
+            <select id="df-batches" name="batches_per_month">
+              <option value="" disabled selected>Roughly how many?</option>
+              <option>Fewer than 10</option>
+              <option>10–50</option>
+              <option>50–200</option>
+              <option>200+</option>
+            </select>
+          </div>
+          <div class="dform-field">
+            <label for="df-current">Currently using</label>
+            <select id="df-current" name="current_tool">
+              <option value="" disabled selected>What tool today?</option>
+              <option>Excel / spreadsheets</option>
+              <option>SIMCA</option>
+              <option>JMP</option>
+              <option>In-house scripts (Python / R)</option>
+              <option>Nothing yet</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="dform-field">
+          <label for="df-challenge">What's the main problem you want to solve?</label>
+          <textarea id="df-challenge" name="challenge" rows="3" placeholder="e.g. We have batch variability we can't explain, manual deviation reports take two weeks..."></textarea>
+        </div>
+
+        <div class="dform-row dform-row--2">
+          <div class="dform-field">
+            <label for="df-referral">How did you hear about us?</label>
+            <select id="df-referral" name="referral">
+              <option value="" disabled selected>Select one</option>
+              <option>LinkedIn</option>
+              <option>Google search</option>
+              <option>Colleague referral</option>
+              <option>Conference or event</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="dform-field" style="align-self: flex-end;">
+            <button type="submit" class="btn btn-primary btn-md dform-submit">
+              Request Demo &rarr;
+            </button>
+          </div>
+        </div>
+
+        <p class="dform-privacy">
+          <i class="fas fa-lock"></i>
+          Your information is only used to follow up on this request. We don't share it with third parties.
+        </p>
+
+      </form>
+    </div>
+
+    <!-- Success state -->
+    <div id="demo-form-success" class="demo-modal__success" style="display:none;">
+      <div class="demo-success-icon"><i class="fas fa-envelope-open-text"></i></div>
+      <h2>One last step</h2>
+      <p>Your email client just opened with everything pre-filled. <strong>Hit Send</strong> to complete your request — we'll get back to you within one business day.</p>
+      <button class="btn btn-outline btn-md" id="demo-success-close" style="border-radius: 0.5rem; margin-top: 1rem;">
+        Got it
+      </button>
+    </div>
+
+  </div>
+</div>

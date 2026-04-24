@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<div class="page-layout">
+    <div class="page-container">
+        <div class="page-header">
+            <h1>{{ page.title }}</h1>
+            <p class="meta">{{ page.date | date: "%B %d, %Y" }}{% if page.author %} · {{ page.author }}{% endif %}</p>
+        </div>
+        <div class="prose">
+            {{ content }}
+        </div>
+    </div>
+</div>

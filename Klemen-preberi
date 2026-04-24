@@ -1,0 +1,22 @@
+Deploying to GitHub Pages:                                                                                                                                                        
+                                                                                                                                                                                    
+  1. Create a GitHub repo (e.g. spectra-site) and push this folder to it
+  2. Enable Pages via Actions: repo Settings → Pages → Source → "GitHub Actions"                                                                                                    
+  3. Push to main — the workflow at .github/workflows/jekyll.yml builds and deploys automatically                                                                                   
+                                                                                                                                                                                    
+  Update _config.yml with your real username:                                                                                                                                       
+  url: "https://YOUR_USERNAME.github.io"                                                                                                                                            
+  baseurl: "/spectra-site"   # or "" if the repo is named YOUR_USERNAME.github.io
+                                                                                                                                                                                    
+  Adding new docs — just create a Markdown file in _docs/:                                                                                                                          
+  _docs/my-new-page.md                                                                                                                                                              
+  With frontmatter at the top:                                                                                                                                                      
+                                                                                                                                                                                    
+  ---                                                       
+  title: My New Page                                                                                                                                                                
+  category: reference                                       
+  ---                                                                                                                                                                               
+     
+  Your content here...                                                                                                                                                              
+  Push to main, the Action rebuilds, it appears at /docs/my-new-page/ automatically. Same pattern for _posts/ (blog) and _usecases/.
+
