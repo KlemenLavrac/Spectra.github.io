@@ -1,7 +1,9 @@
 ---
 layout: doc
-title: Privacy Policy
-description: Last updated: 1 May 2026
+title: "Privacy Policy"
+description: Last updated 1 May 2026.
+category: Legal
+order: 10
 ---
 
 This Privacy Policy explains how Spectra Analytics Ltd ("**Spectra Analytics**", "**we**", "**our**", or "**us**") collects, uses, discloses, and safeguards personal data when you access or use our website at [spectra-analytics.com](https://spectra-analytics.com) and our cloud-based process intelligence platform (together, the "**Services**"). Please read this policy carefully. If you do not agree with its terms, please discontinue use of our Services.

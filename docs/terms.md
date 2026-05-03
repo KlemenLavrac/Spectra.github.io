@@ -1,7 +1,9 @@
 ---
 layout: doc
-title: Terms of Service
-description: Last updated: 1 May 2026
+title: "Terms of Service"
+description: Last updated 1 May 2026.
+category: Legal
+order: 11
 ---
 
 Please read these Terms of Service ("**Terms**") carefully before accessing or using the website at [spectra-analytics.com](https://spectra-analytics.com) or the SPECTRA cloud-based process intelligence platform (together, the "**Services**") operated by **Spectra Analytics Ltd** ("**Spectra Analytics**", "**we**", "**our**", or "**us**").
