@@ -27,8 +27,6 @@ This supports §11.10(d) and §11.10(g) requirements for system access controls.
 
 SPECTRA's AI assistant writes the first draft of every analytical summary — but nothing goes into the final report without an analyst explicitly approving it. Approval is tied to the authenticated user's identity, with a timestamp. Rejected or unapproved text is clearly flagged in the document.
 
-This provides a meaningful electronic record under §11.50 and §11.100.
-
 ### Data integrity by design
 
 Uploaded datasets and analysis results are stored with version history. Nothing is silently overwritten. If a re-analysis is run, it creates a new record alongside the original — not on top of it.
