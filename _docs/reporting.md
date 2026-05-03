@@ -11,7 +11,7 @@ SPECTRA's reporting module bridges the gap between statistical analysis and regu
 
 ### 1. Select Graphs for the Report
 
-As you work through the analysis modules (batch profiling, process charts, PCA, PLS, correlation), each chart has a "Add to Report" action. Selected graphs are queued with their derived statistics — control limits, violation counts, PCA loadings, and regression coefficients.
+As you work through the analysis modules (batch profiling, process charts, PCA, PLS, capability analysis), each chart has a "Add to Report" action. Selected graphs are queued with their derived statistics — control limits, violation counts, PCA loadings, and capability indices.
 
 ### 2. AI-Generated Insights
 
@@ -40,13 +40,13 @@ The document uses Word-native heading styles, so the table of contents resolves 
 
 ## Why Not Just PDF?
 
-Word format was chosen deliberately. Regulated environments often require documents to pass through review and approval workflows where reviewers add comments, tracked changes, or stamps. A .docx supports this; a static PDF does not. PDF export may be added in a future release for final archival.
+Word and PDF outputs match standard GMP documentation formats, so teams use them directly for review, approval, and archiving. Word supports collaboration and editing, while PDF provides a fixed, audit-ready version. This removes manual reformatting and speeds up validation and inspection workflows.
 
 ## Data in the Report
 
 The report includes only the statistics and parameters you selected — no raw data is dumped into the document. Each insight section records:
 
-- Module slug and page label (e.g. "ppa — Process Parameter Analysis")
+- Module slug and page label (e.g. "PPA — Process Parameter Analysis")
 - Graph title and summary text
 - All derived stats (sigma multiplier, UCL/LCL values, violation counts, severity breakdown)
 - Dropdown states and filter selections at the time of capture

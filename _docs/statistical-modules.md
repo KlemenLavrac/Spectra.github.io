@@ -5,13 +5,13 @@ category: Features
 order: 2
 ---
 
-SPECTRA includes a growing suite of analysis modules. Each runs as a background job on your uploaded batch data and produces interactive Plotly charts you can include in your final report. More modules are in development — see the [roadmap](/#roadmap).
+SPECTRA includes a growing suite of analysis modules. Each runs as a background job on your uploaded batch data and produces interactive charts you can include in your final report. More modules are in development — see the [roadmap](/#roadmap).
 
 ## Current Modules
 
 ### BPO — Batch Profiling Overview
 
-The natural starting point for any analysis. Upload your batch CSV and BPO immediately shows the distribution of your selected outcome metric across all batches: histogram, box plot, and summary statistics (mean, std, min, max, quartiles). Outlier batches are highlighted before you drill deeper.
+The natural starting point for any analysis. Upload your batch CSV and BPO immediately shows the distribution of your selected outcome metric across all batches. Outlier batches are highlighted before you drill deeper.
 
 ### PPA — Process Parameter Analysis
 
@@ -23,17 +23,17 @@ Select any process parameter and overlay all batches on a single time-series cha
 
 ### BCT — Batch Comparison Tool
 
-Select two or more batches and overlay their parameter trajectories directly. Useful for root-cause work after BPO or PPA identifies an outlier — compare a failing batch against a reference run, parameter by parameter.
+PLS (Partial Least Squares): reduces your parameter space to 2-3 principal components. The scores plot shows each batch as a point. Clusters mean similar process behavior; outliers mean anomalous runs. The feature contribution plot and contribution trends over time shows which parameters drive the overall process.
 
 ### QAA — Quality Attribute Analysis
 
-Map Critical Process Parameters (CPPs) to Critical Quality Attributes (CQAs) without building a full multivariate model. QAA produces scatter plots and statistical summaries showing how individual parameters correlate with your outcome metric — a quick triage step before running BLM.
+Analyze the process capability of selected outcome metric by displaying a control chart with ±σ control bands (configurable: 1σ, 2σ, 3σ) to understand the potential of your process and estimate the risk of out-of-specification results.
 
 ### BLM — Batch Level Modelling
 
 Full multivariate analysis. BLM covers three complementary techniques on the same dataset:
 
-**PCA (Principal Component Analysis)** — reduces your parameter space to 2–3 principal components. The scores plot shows each batch as a point; clusters mean similar process behavior, outliers mean anomalous runs. The loadings plot shows which parameters drive each component.
+**PCA (Principal Component Analysis)** — links process parameters to your outcome metric via latent variables. Output: feature importance and time-wise contribution by Parameter shows if there is impact on outcome metric .
 
 **PLS (Partial Least Squares)** — links CPPs to your outcome metric via latent variables. Output: variable importance in projection (VIP) scores, predicted vs. actual scatter, and regression coefficients per parameter.
 

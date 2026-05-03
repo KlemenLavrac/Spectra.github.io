@@ -45,13 +45,13 @@ Navigate to the **Analysis** tab and pick a module:
 
 | Module | Best first question to answer |
 |--------|-------------------------------|
-| **Batch Profiling (BPO)** | Which batches had unusually high or low outcomes? |
-| **Process Parameter Analysis (PPA)** | Which parameters deviated from normal in my worst batches? |
-| **Batch Comparison (BCT)** | How does my worst batch compare to my best, parameter by parameter? |
-| **Quality Attribute Analysis (QAA)** | Which parameters correlate most strongly with my outcome? |
-| **Batch Level Modelling (BLM)** | What does a full multivariate model tell me about my process? |
+| **Batch Profiling (BPO)** | Which batches had unusually high or low measurements? |
+| **Quality Attribute Analysis (QAA)** | Is my process capable, and what is the risk for out-of-specifications? |
+| **Batch Level Modelling (BLM)** | Which parameters should I select to monitor and control my process to achieve improvement? |
+| **Batch Comparison (BCT)** | Which batches and parameters should be selected as golden batches for process monitoring and control? |
+| **Process Parameter Analysis (PPA)** | Which control limits should I define to improve my process? |
 
-Most teams start with **BPO** to get a feel for the data, then move to **PPA** to investigate specific parameters.
+Most teams start with **BPO** to get a feel for the data, then move to **BLM** to understand which process parameters and attributes impact outcomes (yield, defects, content, purity, etc.). After identifying significant process parameters through **BLM**, teams move to the **BCT** module to understand which batches differ and to select golden batches. These are then used in the **PPA** module to define and refine control limits. The **QAA** module is used to assess process capability and the risk of out-of-specification results both before and after control limits are implemented.
 
 ---
 
@@ -61,10 +61,10 @@ As you work through each analysis, click **Add to Report** on any chart that tel
 
 1. Go to the **Report** tab
 2. SPECTRA's AI assistant will have written a plain-language summary for each chart
-3. Read each summary — approve what's accurate, add your own notes, reject anything you disagree with
-4. Click **Export** to download a Word (.docx) document with all selected charts, summaries, and your notes included
+3. Read each summary. Validate the AI summary, add your own notes, and reject any process improvement ideas you do not agree with.Approve what is accurate, add your own notes, reject anything you disagree with
+4. Click **Export** to download a Word (.docx) or PDF document with all selected charts, summaries, and your notes included
 
-The exported report includes a cover page, table of contents, and page numbers — ready to go into a process validation file or deviation investigation package.
+The exported report includes a cover page, table of contents, and page numbers. It is ready for inclusion in a process validation file or deviation investigation package after an electronic signature by the author and reviewers in the documentation system in your environment.
 
 ---
 
