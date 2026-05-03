@@ -8,7 +8,7 @@ order: 1
 ## What You'll Need
 
 - Your batch data as a `.csv` file — one row per time point, one column per process parameter, with a batch ID column and a timestamp column
-- A SPECTRA account (contact us at [demo@spectra.app](mailto:demo@spectra.app) to get access)
+- A SPECTRA account (contact us at [info@spectra-analytics.com](mailto:info@spectra-analytics.com) to get access)
 
 That's it. No software to install if you're using the hosted version.
 

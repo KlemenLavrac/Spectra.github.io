@@ -66,4 +66,4 @@ SPECTRA's analysis modules — particularly Batch Level Modelling with PCA and P
 
 ## Questions?
 
-If you need specific compliance documentation, validation support, or a call with your QA team, [contact us](mailto:demo@spectra.app).
+If you need specific compliance documentation, validation support, or a call with your QA team, [contact us](mailto:info@spectra-analytics.com).

@@ -1,7 +1,7 @@
 (() => {
     'use strict';
 
-    const DEMO_EMAIL = 'demo@spectra.app';
+    const DEMO_EMAIL = 'info@spectra-analytics.com';
 
     const modal      = document.getElementById('demo-modal');
     const overlay    = document.getElementById('demo-modal-overlay');
